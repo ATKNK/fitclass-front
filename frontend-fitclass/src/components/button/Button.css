@@ -1,0 +1,8 @@
+.button {
+    background-color: #C6FC03;
+    color: #000000;
+    border-radius: 2vh;
+    padding: 2%;
+    font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    text-decoration: none;
+}

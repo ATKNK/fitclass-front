@@ -1,0 +1,75 @@
+.profileMain{
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    padding-top: 20%;
+    background-color: #262626;
+    font-family: system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji
+}
+
+.title{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: x-large;
+    font-weight: bold;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.meu{
+    color: #ffffff;
+}
+
+.perfil{
+    color: #C6FC03;
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    padding: 5%;
+}
+
+.forms{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: fit-content;
+    padding: 5%;
+    border-radius: 2.5vh;
+    background-image: linear-gradient(to bottom, #5C5454, #262626);
+}
+
+.formLabel{
+    padding-left: 10%;
+    color: #ffffff;
+    font-weight: bolder;
+}
+
+.formInput{
+    background-color: #3F3B3B;
+    border: solid #C6FC03;
+    border-radius: 2vh;
+    color: #B6B1B1;
+    padding: 1vh;
+}
+
+.lowerButtons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    bottom: 0;
+}
+
+.navbar{
+    width: 100%;
+    bottom: 0;
+}

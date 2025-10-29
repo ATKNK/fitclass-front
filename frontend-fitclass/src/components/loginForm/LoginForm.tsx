@@ -43,7 +43,7 @@ export default function LoginForm() {
         onChange={(e) => setSenha(e.target.value)}
       />
 
-      <button onClick={handleLogin} />
+      <button onClick={handleLogin}>LOGIN</button>
 
       {error && <div className="error">{error}</div>}
     </div>

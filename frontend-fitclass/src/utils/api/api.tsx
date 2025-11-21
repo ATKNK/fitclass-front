@@ -8,16 +8,19 @@ export async function apiFetch<T = unknown>(
 ): Promise<T> {
   const token = getToken();
 
+  const publicRoutes = ["/auth/login", "/auth/register"];
+
+  const shouldSendToken = token && !publicRoutes.includes(endpoint);
+
   const headers = {
     "Content-Type": "application/json",
-    ...(token && { Authorization: `Bearer ${token}` }),
+    ...(shouldSendToken && { Authorization: `Bearer ${token}` }),
     ...(options.headers || {}),
   };
 
   const response = await fetch(`${BASE_URL}${endpoint}`, {
-  method: options.method,
-  headers,
-  body: options.body,
+    ...options,
+    headers,
   });
 
   if (!response.ok) {

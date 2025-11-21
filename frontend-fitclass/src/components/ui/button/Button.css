@@ -9,7 +9,7 @@
   font-size: 20px;
   font-weight: 500;
   height: 49px;
-  width: 100%;
+  width: auto;
   transition: all 0.2s ease;
   padding: 12px 24px;
 }

@@ -27,6 +27,7 @@ return (
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route path='/profile' element={<PrivateRoute><Profile/></PrivateRoute>}/>
+        <Route path="/" element={<PrivateRoute><Home /></PrivateRoute>}/>
         <Route path="/home" element={<PrivateRoute><Home /></PrivateRoute>}/>
         <Route path="/register" element={<Register />}/>
         <Route path="/reservations" element={<PrivateRoute><Reservations/></PrivateRoute>}/>

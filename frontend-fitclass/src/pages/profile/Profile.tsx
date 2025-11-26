@@ -1,7 +1,9 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Button from "../../components/ui/button/Button";
 import InputAlt from "../../components/formInputAlt/InputAlt";
 import "./Profile.css";
+import { useNavigate } from "react-router";
+import { isAuthenticated, removeToken } from "../../utils/api/auth";
 
 function Profile() {
   const [name, setName] = useState("");
@@ -9,12 +11,27 @@ function Profile() {
   const [email, setEmail] = useState("");
   const [cep, setCep] = useState("");
 
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (!isAuthenticated()) {
+      navigate("/login");
+    }
+  }, [navigate]);
+
+  const handleLogout = () => {
+    removeToken();
+    navigate("/login");
+  };
+
   return (
     <div className="profileMain">
       <div className="title">
         <p className="meu">Meu</p>
         <p className="perfil">Perfil</p>
       </div>
+
+       <Button title="Sair" onClick={handleLogout} />
 
       <div className="buttons">
         <Button title="Editar Dados" />

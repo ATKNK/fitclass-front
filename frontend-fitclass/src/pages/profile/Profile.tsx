@@ -1,4 +1,5 @@
 import Button from "../../components/ui/button/Button";
+import InputAlt from "../../components/formInputAlt/InputAlt";
 import "./Profile.css";
 
 function Profile() {
@@ -14,16 +15,13 @@ function Profile() {
 
         <form className="forms">
             <label className="formLabel">Nome</label>
-            <input className="formInput" type="text" placeholder="Seu nome"></input>
-
-            <label className="formLabel">Data de Nascimento</label>
-            <input className="formInput" type="text" placeholder="DD/MM/AAAA"></input>
+            <InputAlt />
 
             <label className="formLabel">Email</label>
-            <input className="formInput" type="text" placeholder="seuemail@exemplo.com"></input>
+            <InputAlt />
 
             <label className="formLabel">CEP</label>
-            <input className="formInput" type="text" placeholder="XXXXX-XXX"></input>
+            <InputAlt />
         </form>
 
         <div className="lowerButtons">
